@@ -1,0 +1,28 @@
+title: Barevné Učení - soukromá speciálně-pedagogická praxe
+email: katka@barevneuceni.cz
+description: "Barevné Učení - soukromá speciálně-pedagogická a logopedická praxe"
+baseurl: ""
+url: "http://www.barevne-uceni.cz"
+
+facebook_username: barevneuceni
+
+pages_dir: pages
+posts_dir: _posts
+drafts_dir: _drafts
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Kateřina Tyšlerová <katka@barevneuceni.cz>"
+      layout: "default"
+      excerpt_separator: <!--more-->
+      changefreq: weekly
+      sitemap_exclude: 0
+      type: website
+      image: profile_fb.png
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
