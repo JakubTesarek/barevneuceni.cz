@@ -1,0 +1,30 @@
+<div class="strip">
+	<div class="container">
+		<h2>Napište nám</h2>
+
+		<div class="left half">
+			{% if page.profile %}
+				{% assign profile = site.data.people[page.profile] %}
+				{% include profile.html profile=profile %}
+			{% else %}
+				{% assign profile = site.data.people["katka"] %}
+				{% include profile.html profile=profile %}
+
+				{% assign lucka = site.data.people["lucka"] %}
+				{% include profile.html profile=lucka %}
+			{% endif %}
+		</div>
+
+		<div class="right half">
+			<form action="https://formspree.io/{{profile.email}}" method="POST">
+				<input type="hidden" name="_subject" value="Nová zpráva z Barevné Učení" />
+				<input type="hidden" name="_next" value="/contacts" />
+				<input type="text" name="_gotcha" style="display:none" />
+				<input type="email" name="_replyto" id="contact-email" placeholder="váš@email" required>
+				<textarea name="message" placeholder="Zpráva" required></textarea>
+				<input type="submit" value="Odeslat">
+			</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
