@@ -32,6 +32,14 @@ body {
 	font-size: 125%;
 }
 
+iframe {
+	border:0; width: 100%
+}
+
+.clear {
+	clear: both;
+}
+
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
@@ -72,9 +80,6 @@ body {
 	}
 }
 
-.clear {
-	clear: both;
-}
 
 a {
 	color: $front-color;
