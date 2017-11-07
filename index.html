@@ -76,27 +76,22 @@ changefreq: daily
 			Dveře č. 22, první patro
 
 			<div class="profile">
-				<h3>Mgr. Kateřina Tyšlerová</h3>
-				<i class="fa fa-phone" aria-hidden="true"></i> +420 737 511 037<br>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:katka@barevneuceni.cz">katka@barevneuceni.cz</a></span>
+				{% assign profile = site.data.people["katka"] %}
+				<h3>{{profile.name}}</h3>
+				<i class="fa fa-phone" aria-hidden="true"></i> {{profile.phone}}<br>
+				<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">{{profile.email}}</a></span>
 			</div>
 
 			<div class="profile">			
-				<h3>Mgr. Lucie Vítková</h3>
-				<i class="fa fa-phone" aria-hidden="true"></i> +420 721 911 606<br>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:lucka@barevneuceni.cz">lucka@barevneuceni.cz</a></span>
+				{% assign lucka = site.data.people["lucka"] %}
+				<h3>{{lucka.name}}</h3>
+				<i class="fa fa-phone" aria-hidden="true"></i> {{lucka.phone}}<br>
+				<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">{{lucka.email}}</a></span>
 			</div>
 		</div>
 
 		<div class="right half">
-			<form action="https://formspree.io/katka@barevneuceni.cz" method="POST">
-				<input type="hidden" name="_subject" value="Nová zpráva z Barevné Učení" />
-				<input type="hidden" name="_next" value="/contacts" />
-				<input type="text" name="_gotcha" style="display:none" />
-				<input type="email" name="_replyto" id="contact-email" placeholder="váš@email" required>
-				<textarea name="message" placeholder="Zpráva" required></textarea>
-				<input type="submit" value="Odeslat">
-			</form>
+			{% include contact_form.html email=profile.email %}
 		</div>
 	</div>
 	<div class="clear"></div>

@@ -1,0 +1,8 @@
+<form action="https://formspree.io/{{include.email}}" method="POST">
+	<input type="hidden" name="_subject" value="Nová zpráva z Barevné Učení" />
+	<input type="hidden" name="_next" value="/contacts" />
+	<input type="text" name="_gotcha" style="display:none" />
+	<input type="email" name="_replyto" id="contact-email" placeholder="váš@email" required>
+	<textarea name="message" placeholder="Zpráva" required></textarea>
+	<input type="submit" value="Odeslat">
+</form>
