@@ -42,7 +42,7 @@ changefreq: daily
 <div class="clear"></div>
 
 <section class="strip">
-	<div class="container">
+	<div class="container space-top">
 		<div class="left half bordered">
 			<div class="profile large">
 				<img src="/assets/img/katka.jpg">
@@ -70,24 +70,23 @@ changefreq: daily
 		<h2>Kontakty</h2>
 
 		<div class="left half">
-			<h3>Adresa</h3>
+			<h4 class="no-space-top">Adresa</h4>
 			Pod Kaštany 183/3<br>
 			Praha 6 - Dejvice<br>
 			Dveře č. 22, první patro
 
-			<div class="profile">
-				{% assign profile = site.data.people["katka"] %}
-				<h3>{{profile.name}}</h3>
-				<i class="fa fa-phone" aria-hidden="true"></i> {{profile.phone}}<br>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">{{profile.email}}</a></span>
-			</div>
-
-			<div class="profile">			
-				{% assign lucka = site.data.people["lucka"] %}
-				<h3>{{lucka.name}}</h3>
-				<i class="fa fa-phone" aria-hidden="true"></i> {{lucka.phone}}<br>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">{{lucka.email}}</a></span>
-			</div>
+			{% assign profile = site.data.people["katka"] %}
+			<h4>{{profile.name}}</h4>
+			<i class="fa fa-phone" aria-hidden="true"></i> {{profile.phone}}<br>
+			<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">
+			{{profile.email}}</a></span><br>
+			<i class="fa fa-id-card-o" aria-hidden="true"></i> ičo: {{profile.ico}}
+			
+			{% assign lucka = site.data.people["lucka"] %}
+			<h4>{{lucka.name}}</h4>
+			<i class="fa fa-phone" aria-hidden="true"></i> {{lucka.phone}}<br>
+			<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">{{lucka.email}}</a></span><br>
+			<i class="fa fa-id-card-o" aria-hidden="true"></i> ičo: {{profile.ico}}
 		</div>
 
 		<div class="right half">
@@ -96,7 +95,7 @@ changefreq: daily
 	</div>
 	<div class="clear"></div>
 
-	<div class="container">
+	<div class="container space-top">
 		<div class="left half">
 			<iframe src="https://api.mapy.cz/frame?params=%7B%22x%22%3A14.405123968306565%2C%22y%22%3A50.09822889770171%2C%22base%22%3A%2227%22%2C%22layers%22%3A%5B%5D%2C%22zoom%22%3A17%2C%22url%22%3A%22https%3A%2F%2Fen.mapy.cz%2Fs%2F22eYw%22%2C%22mark%22%3A%7B%22x%22%3A%2214.405123968306565%22%2C%22y%22%3A%2250.09822889770171%22%2C%22title%22%3A%22Pod%20Ka%C5%A1tany%20183%2F3%2C%20Praha%22%7D%2C%22overview%22%3Atrue%7D&amp;width=400&amp;height=300&amp;lang=cs-CZ" height="300" frameBorder="0"></iframe>
 		</div>
