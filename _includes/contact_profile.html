@@ -1,7 +1,7 @@
 <div class="profile">
-	<img src="{{include.profile.picture}}">
-	<h3>{{include.profile.name}}</h3>
-	<i class="fa fa-phone" aria-hidden="true"></i> {{include.profile.phone}}<br>
+	<a href="{{ site.baseurl }}{{include.profile.page}}"><img src="{{include.profile.picture}}"></a>
+	<h3><a href="{{ site.baseurl }}{{include.profile.page}}">{{include.profile.name}}</a></h3>
+	<i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{include.profile.phone | remove:' '}}">{{include.profile.phone}}</a><br>
 	<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{include.profile.email}}">{{include.profile.email}}</a><br>
 	<i class="fa fa-id-card-o" aria-hidden="true"></i> ič: {{include.profile.ic}}
 </div>

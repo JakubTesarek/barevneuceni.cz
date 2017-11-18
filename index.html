@@ -6,17 +6,18 @@ changefreq: daily
 
 <header class="strip">
 	<div class="container">
-		<h1 class="main-title"><i class="b">B</i>arevné <i class="u">U</i>čení</h1>
-		<h2 class="main-title">Soukromá speciálně-pedagogická praxe</h2>
+		<h1 class="main-title with-subtitle">{% include barevne_uceni.html %}</h1>
+		<h2 class="sub-title">Soukromá speciálně-pedagogická praxe</h2>
 	</div>
 </header>
 
 <section class="strip">
 	<div class="container">
-		<p>U nás učení není nuda, u nás je to zábava!</p>
-		<p>Zaměřujeme se na děti ve věku od 3 do 12 let, které mají potíže s řečí, grafomotorikou, pozorností, školními dovednostmi a podobně. Nenásilnou formou podporujeme všechny důležité dovednosti a schopnosti dítěte. Využíváme širokou paletu pomůcek metod a technik, které přizpůsobujeme podle potřeb každého malého klienta.</p>
+		<p>Barevné učení vzniklo v září v roce 2017 jako splněný sen dvou kamarádek, speciálních pedagogů. Vytvořily jsme si prostor, kde můžeme pomáhat dětem podle našich představ a nejlepšího vědomí a svědomí. Zaměřujeme se na děti ve věku od 3 do 12 let, které mají potíže s řečí, grafomotorikou, pozorností, školními dovednostmi a podobně. Nenásilnou formou podporujeme a rozvíjíme všechny důležité dovednosti a schopnosti dítěte. Využíváme širokou paletu pomůcek metod a technik, které přizpůsobujeme potřebám a schopnostem každého malého klienta. Stále se vzděláváme, studujeme a objevujeme nové metody a možnosti, jak dětem pomoci bez zbytečného drilu a stresu. Snažíme se, aby u nás bylo dětem dobře a rády se i s rodiči vracely.</p>
 
 		<p>A co je nejdůležitější, pracujeme s úsměvem, hravě a barevně.</p>
+
+		<p>U nás učení není nuda, u nás je to zábava!</p>
 	</div>
 </section>
 
@@ -30,9 +31,8 @@ changefreq: daily
 			<li><a href="{{ site.baseurl }}{% link pages/predskolni-pripravka.html %}">Předškolní přípravka</a></li>
 			<li><a href="{{ site.baseurl }}{% link pages/napravy-dysgrafie.html %}">Nápravy dysgrafie a grafomotorických potíží</a></li>
 			<li><a href="{{ site.baseurl }}{% link pages/kupoz.html %}">KUPOZ - Program pro rozvoj pozornosti</a></li>
-			<li>Nápravy dyslexie a jiných specifických poruch učení</li>
+			<li><a href="{{ site.baseurl }}{% link pages/kupoz.html %}">Nápravy dyslexie a jiných specifických poruch učení</a></li>
 			<li>Trénink jazykových schopností podle D.B. Elkonina</li>
-			<li>Arteterapie pro děti</li>
 			<li>Individuální výuka metody znak do řeči</li>
 			<li>Psychologické a výchovné poradenství</li>
 		</ul>
@@ -46,18 +46,21 @@ changefreq: daily
 		<div class="left half bordered">
 			<div class="profile large">
 				<img src="/assets/img/katka.jpg">
-				<h3>Mgr. Kateřina Tyšlerová</h3>
+				<h3><a href="{{ site.baseurl }}{% link pages/katka.html %}">Mgr. Kateřina Tyšlerová</a></h3>
 				Speciální pedagog, logoped
-				<p>Jíl tedy, šofér – denní 30 smyslů vliv tašky nervy sedmé! Ať my vůz koňak u bát začínal zvrhlý, mat antona pokles. On nic už podal kladlo matka. Oni poruší toman motykami strojního žemličky nu činy trestance z nařídili. Bác mé voní pěst barvách dře trigemin ohromným. Nu dálky uf alarmováno duši si dědky temná on nim kývl mu a bezprostřednost.</p>
+
+				<p>Moje práce je pro mě zábavou, stejně, jako čas strávený s mojí rodinou, procházky se psem, čtení, divadlo, plavání, jízda na koni, tvoření pomůcek pro děti a další aktivity, kterým se věnuji ve volném čase.</p>
+
 			</div>
 		</div>
 
 		<div class="right half">
 			<div class="profile large">
 				<img src="/assets/img/lucka.jpg">
-				<h3>Mgr. Lucie Vítková</h3>
+				<h3><a href="{{ site.baseurl }}{% link pages/lucka.html %}">Mgr. Lucie Vítková</a></h3>
 				Speciální pedagog, arteterapeut
-				<p>Žena hrboly 56 šla přečetl. Hrdina ode domovnice chlapečka neobtěžoval košilím skrývá vážek. Boj tě provázek, hadry zvané tmě jest, těma ah ně máš sklady nečetl soudcem sebou.</p>
+
+				<p>Pracovat s dětmi jsem začala už během studia na střední pedagogické škole v rámci odborných praxí v mateřské školce, dětském koutku a školní družině. Později jako asistent v pedagogicko-psychologické poradně, chůva, vedoucí na letních táborech, lektor zájmových kroužků pro děti (Keramika, výtvarný kroužek, Předškoláček v PPP atd.) a terapeut individuálních arteterapeutických hrátek pro děti s poruchami autistického spektra a ADHD.</p>
 			</div>
 		</div>
 	</div>
@@ -72,7 +75,7 @@ changefreq: daily
 		<div class="left half">
 			{% assign profile = site.data.people["katka"] %}
 			{% include contact_profile.html profile=profile %}
-			
+
 			{% assign lucka = site.data.people["lucka"] %}
 			{% include contact_profile.html profile=lucka %}
 		</div>

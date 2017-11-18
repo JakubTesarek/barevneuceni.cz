@@ -1,6 +1,10 @@
 <div class="strip">
 	<div class="container">
-		<h2>Napište nám</h2>
+		{% if page.profile %}
+			<h2>Napište mi</h2>
+		{% else %}
+			<h2>Napište nám</h2>
+		{% endif %}
 
 		<div class="left half">
 			{% if page.profile %}
