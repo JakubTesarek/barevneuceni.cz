@@ -4,7 +4,9 @@
 /* COLORS */
 
 $front-color: #555555;
+
 $gray-color-back: #cccccc;
+$gray-color-front: #777777;
 $green-color-back: #ccd755;
 $orange-color-front: #f8a45b;
 $blue-color-back: #538eca;
@@ -121,6 +123,43 @@ p {
 	margin-top: 0;
 }
 
+/* FLASHES */
+
+#flashes {
+	position: fixed;
+	width: 100%;
+}
+
+.flash {
+	margin: 1em;
+	background-color: $blue-color-back;
+	color: white;
+	padding: 1em;
+	position: relative;
+
+	button {
+		color: white;
+		border: none;
+		background: none;
+		font-weight: bold;
+		font-size: 150%;
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		cursor: pointer;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.flash.failure {
+	background-color: $red-color-front;
+}
+
+
+
 /* HEADER */
 
 h1 {
@@ -141,7 +180,7 @@ h1.main-title {
 }
 
 h2.sub-title {
-	color: #777;
+	color: $gray-color-front;
 	text-align: center;
 	margin: 0px 0px 50px 0px;
 	text-transform: uppercase;
@@ -194,6 +233,17 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: white;
 	color: $orange-color-front;
+}
+
+input[type="submit"]:disabled {
+	background-color: white;
+	border-color: $gray-color-front;
+	color: $gray-color-front;
+	cursor: progress;
+}
+
+input[type="submit"]:disabled:hover {
+	background-color: white;
 }
 
 /* LISTS */
