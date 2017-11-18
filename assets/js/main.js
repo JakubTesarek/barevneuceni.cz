@@ -1,5 +1,6 @@
 $(document).ready(function() {
   init_form();
+  init_maps();
   init_external_links();
 });
 
@@ -14,6 +15,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 function init_external_links() {
 	$('a.external' ).attr('target', '_blank');	
 }
+
+function init_maps() {
+  $('#maps').click(function () {
+    $('#maps iframe').css('pointer-events', "auto");
+  });
+
+  $('#maps').mouseleave(function() {
+    $('#maps iframe').css('pointer-events', 'none'); 
+  });
+}
+
 
 function init_form() {
     $('body').on('click', '.flash > button', function(event){
