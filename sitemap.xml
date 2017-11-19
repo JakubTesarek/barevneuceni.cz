@@ -9,7 +9,6 @@ sitemap_exclude: 1
 		{% if page.sitemap_exclude != 1 %}
 			<url>
 				<loc>{{ page.url | absolute_url}}</loc>
-				<lastmod>{{ page.date }}</lastmod>
 				<changefreq>{{ page.changefreq }}</changefreq>
 				<priority>1</priority>
 			</url>
