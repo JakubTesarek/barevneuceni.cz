@@ -2,6 +2,7 @@ $(document).ready(function() {
   init_form();
   init_maps();
   init_external_links();
+  init_galery();
 });
 
 
@@ -66,3 +67,16 @@ function init_form() {
   });
 }
 
+
+function init_galery() {
+  var modal = $('#modal')
+  $('img.open-galery').click(function() {
+    modal.find('#modal-content').attr('src', $(this).attr('src'));
+    modal.find('#modal-caption').html($(this).attr('alt'))
+    modal.show()
+  })
+
+  var close = $('#modal-close').click(function(){
+    modal.hide()
+  })
+}
