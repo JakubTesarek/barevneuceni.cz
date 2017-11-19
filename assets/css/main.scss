@@ -123,6 +123,10 @@ a {
 	border-bottom: 1px solid $gray-color-back;
 }
 
+a > .fa-arrow-right{
+	 color: $green-color-back !important;
+}
+
 p {
 	text-align: justify;
 	margin-top: 0;
