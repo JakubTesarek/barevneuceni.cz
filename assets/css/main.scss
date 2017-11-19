@@ -63,6 +63,10 @@ iframe {
 	padding-bottom: 2em
 }
 
+.strip.no-space-bottom {
+	padding-bottom: 0
+}
+
 .strip.green {
 	background-color: $green-color-back;
 
@@ -136,8 +140,9 @@ p {
 	margin: 1em;
 	background-color: $blue-color-back;
 	color: white;
-	padding: 1em;
+	padding: 0.5em;
 	position: relative;
+	padding-right: 2.5em;
 
 	button {
 		color: white;
@@ -146,13 +151,18 @@ p {
 		font-weight: bold;
 		font-size: 150%;
 		position: absolute;
-		right: 20px;
-		top: 15px;
+		right: 15px;
+		top: 5px;
 		cursor: pointer;
 	}
 
 	p {
 		margin-bottom: 0;
+	}
+
+	a {
+		color: white;
+		border-color: white;
 	}
 }
 
@@ -160,7 +170,9 @@ p {
 	background-color: $red-color-front;
 }
 
-
+@media only screen and (max-width: 430px) {
+	
+}
 
 /* HEADER */
 
@@ -181,16 +193,23 @@ h1.main-title {
 	margin-top: 20px;
 }
 
+@media only screen and (max-width: 650px) {
+	h1 {
+		font-size: 40px;
+	}
+}
+
+h2 {
+	margin-bottom: 0.5em;
+	margin-top: 0;
+}
+
 h2.sub-title {
 	color: $gray-color-front;
 	text-align: center;
 	margin: 0px 0px 50px 0px;
 	text-transform: uppercase;
 	font-size: 121%
-}
-
-h2 {
-	margin-bottom: 0.5em;
 }
 
 h3 {
@@ -257,7 +276,7 @@ ul {
 
 	li {
 		padding-left: 1em; 
-		text-indent: -.7em;
+		text-indent: -1.1em;
 	}
 
 	li::before {
@@ -271,9 +290,9 @@ ul {
 /* PROFILE */
 
 .profile {
-	 margin-bottom: 40px;
+	margin-bottom: 40px;
 
-	 img {
+	img {
 		margin-top: 5px;
 		display: inline-block;
 		float: left;
@@ -291,10 +310,23 @@ ul {
 }
 
 img.large-profile {
-	 width: 285px;
-	 float: left;
-	 margin-right: 1em;
-	 margin-top: 5px;
+	width: 285px;
+	float: left;
+	margin-right: 1em;
+	margin-top: 5px;
+}
+
+@media only screen and (max-width: 430px) {
+	.profile img {
+		display: none;
+	}
+
+	.profile.large img {
+		float: none;
+		display: block;
+		margin-bottom: 5px;
+		align: center
+	}
 }
 
 /* MENU */
