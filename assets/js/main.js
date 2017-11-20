@@ -69,9 +69,10 @@ function init_form() {
 
 
 function init_galery() {
-  var modal = $('#modal')
+  var modal = $('#modal');
   $('img.open-galery').click(function() {
-    modal.find('#modal-content').attr('src', $(this).attr('src'));
+    img_url = $(this).data('ref') || $(this).attr('src');
+    modal.find('#modal-content').attr('src', img_url);
     modal.find('#modal-caption').html($(this).attr('alt'))
     modal.show()
   })

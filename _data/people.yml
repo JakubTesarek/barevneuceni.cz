@@ -2,7 +2,7 @@ katka:
   name: Mgr. Kateřina Tyšlerová
   email: katka@barevneuceni.cz
   phone: +420 737 511 037
-  picture: /assets/img/katka.jpg
+  picture: /assets/img/katka-profile.jpg
   ic: 03984338
   page: /katka
 
@@ -10,6 +10,6 @@ lucka:
   name: Mgr. Lucie Vítková
   email: lucka@barevneuceni.cz
   phone: +420 721 911 606
-  picture: /assets/img/lucka.jpg
+  picture: /assets/img/lucka-profile.jpg
   ic: 06514642
   page: /lucka
