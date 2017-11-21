@@ -398,6 +398,22 @@ i.syl.gray {
 }
 
 /* GALERY */
+.galery img {
+	width: 19.5%;
+}
+
+@media only screen and (max-width: 820px) {
+	.galery img {
+		width: 32%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.galery img {
+		width: 100%;
+	}
+}
+
 
 img.open-galery {
     cursor: pointer;
@@ -485,4 +501,3 @@ img.open-galery:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
