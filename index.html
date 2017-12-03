@@ -27,6 +27,14 @@ changefreq: daily
 		<p>A co je nejdůležitější, pracujeme s úsměvem, hravě a barevně.</p>
 
 		<p>U nás učení není <span class="larger-font"><i class="syl gray">nuda</i></span>, u nás je to <span class="larger-font"><i class="syl ba">z</i><i class="syl rev">á</i><i class="syl ne">b</i><i class="syl u">a</i><i class="syl ce">v</i><i class="syl ni">a</i></span>!</p>
+
+		<div class="galery">
+			<img src="/assets/img/galery/carpet.jpg" data-ref="/assets/img/galery/carpet-large.jpg" class="open-galery" alt="">
+			<img src="/assets/img/galery/faces-cards.jpg" data-ref="/assets/img/galery/faces-cards-large.jpg" class="open-galery" alt="">
+			<img src="/assets/img/galery/place.jpg" data-ref="/assets/img/galery/place-large.jpg" class="open-galery" alt="">
+			<img src="/assets/img/galery/pencils.jpg" data-ref="/assets/img/galery/pencils-large.jpg" class="open-galery" alt="">
+			<img src="/assets/img/galery/table.jpg" data-ref="/assets/img/galery/table-large.jpg" class="open-galery" alt="">
+		</div>
 	</div>
 </section>
 
@@ -54,34 +62,34 @@ changefreq: daily
 	<div class="container space-top">
 		<div class="left half bordered">
 			<div class="profile large">
-				<img src="/assets/img/katka-profile.jpg" class="open-galery" alt="Mgr. Kateřina Tyšlerová" data-ref="/assets/img/katka-profile-large.jpg">
-				<h3><a href="{{ site.baseurl }}{% link pages/katka.html %}">Mgr. Kateřina Tyšlerová</a></h3>
-				<p>Jsem vystudovaný speciální pedagog, logoped a práci, s především předškolními dětmi, se věnuji přibližně deset let. Na mojí práci mě nejvíce baví dětský pohled na svět, jejich fantazie, bezprostřednost, upřímnost a hravost. Největší odměnou je pro mě dětský úsměv, nadšené dítě a spokojený rodič.</p>
-				<p><a href="{{ site.baseurl }}{% link pages/katka.html %}">Vzdělání a kvalifikace <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+				{% assign profile = site.data.people['katka'] %}
+				<img src="{{profile.picture}}" class="open-galery" alt="{{profile.name}}" data-ref="{{profile.picture_large}}">
+				<h3><a href="{{ site.baseurl }}{{profile.page}}">{{profile.name}}</a></h3>
+				<p>{{profile.bio}}</p>
+
+				<div class="profile">
+					<i class="fa fa-graduation-cap" aria-hidden="true"></i> <a href="{{ site.baseurl }}{{profile.page}}">Vzdělání a kvalifikace</a><br>
+					<i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{profile.phone | remove:' '}}">{{profile.phone}}</a><br>
+					<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">{{profile.email}}</a><br>
+					<i class="fa fa-id-card-o" aria-hidden="true"></i> ič: {{profile.ic}}
+				</div>
 			</div>
 		</div>
 
 		<div class="right half">
 			<div class="profile large">
-				<img src="/assets/img/lucka-profile.jpg" class="open-galery" alt="Mgr. Lucie Vítková" data-ref="/assets/img/lucka-profile-large.jpg">
-				<h3><a href="{{ site.baseurl }}{% link pages/lucka.html %}">Mgr. Lucie Vítková</a></h3>
-				<p>Jsem budoucí arteterapeut a vystudovaný speciální pedagog. Zaměřuji se především na děti se specifickými vývojovými poruchami školních dovedností. Proto pracuji nejen v Barevném učení ale, i jako školní speciální pedagog v ZŠ. Nejkrásnější na mé práci je vidět, jak děti a mnohdy i rodiče, během pravidelných lekcí rozkvétají. Jsou klidnější, šikovnější, veselejší a těší se na společnou práci.</p>
+				{% assign profile = site.data.people['lucka'] %}
+				<img src="{{profile.picture}}" class="open-galery" alt="{{profile.name}}" data-ref="{{profile.picture_large}}">
+				<h3><a href="{{ site.baseurl }}{{profile.page}}">{{profile.name}}</a></h3>
+				<p>{{profile.bio}}</p>
 
-				<p><a href="{{ site.baseurl }}{% link pages/lucka.html %}">Vzdělání a kvalifikace <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+				<div class="profile">
+					<i class="fa fa-graduation-cap" aria-hidden="true"></i> <a href="{{ site.baseurl }}{{profile.page}}">Vzdělání a kvalifikace</a><br>
+					<i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{profile.phone | remove:' '}}">{{profile.phone}}</a><br>
+					<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{profile.email}}">{{profile.email}}</a><br>
+					<i class="fa fa-id-card-o" aria-hidden="true"></i> ič: {{profile.ic}}
+				</div>
 			</div>
-		</div>
-	</div>
-</section>
-
-<section class="strip" id="galery">
-	<div class="container">
-		<h2>Jak to u nás vypadá</h2>
-		<div class="galery">
-			<img src="/assets/img/galery/carpet.jpg" data-ref="/assets/img/galery/carpet-large.jpg" class="open-galery" alt="">
-			<img src="/assets/img/galery/faces-cards.jpg" data-ref="/assets/img/galery/faces-cards-large.jpg" class="open-galery" alt="">
-			<img src="/assets/img/galery/place.jpg" data-ref="/assets/img/galery/place-large.jpg" class="open-galery" alt="">
-			<img src="/assets/img/galery/pencils.jpg" data-ref="/assets/img/galery/pencils-large.jpg" class="open-galery" alt="">
-			<img src="/assets/img/galery/table.jpg" data-ref="/assets/img/galery/table-large.jpg" class="open-galery" alt="">
 		</div>
 	</div>
 </section>
@@ -89,13 +97,9 @@ changefreq: daily
 <section class="strip" id="kontakt">
 	<div class="container">
 		<h2>Kontakty</h2>
-
+		<p>Pod Kaštany 183/3, Praha 6 - Dejvice, první patro - dveře č. 22</p>
 		<div class="left half">
-			{% assign profile = site.data.people["katka"] %}
-			{% include contact_profile.html profile=profile %}
-
-			{% assign lucka = site.data.people["lucka"] %}
-			{% include contact_profile.html profile=lucka %}
+			<div class="fb-page" data-href="https://www.facebook.com/barevneuceni/" data-tabs="timeline" data-width="500" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/barevneuceni/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/barevneuceni/">Barevné učení</a></blockquote></div>
 		</div>
 		<div class="right half">
 			{% include contact_form.html email=profile.email %}
@@ -103,17 +107,9 @@ changefreq: daily
 	</div>
 </section>
 
-<section class="strip" id="adresa">
-	<div class="container">
-		<h2 class="">Kde nás najdete</h2>
-		<p>Pod Kaštany 183/3, Praha 6 - Dejvice, první patro - dveře č. 22</p>
-		<div id="maps" class="left half">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1402.2493421141533!2d14.404227075266569!3d50.09815685081143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9520b6f49757%3A0xdd190d28a9780144!2sPod+ka%C5%A1tany+183%2F3%2C+160+00+Praha+6-Dejvice!5e0!3m2!1scs!2scz!4v1511110653990" frameborder="0" width="400" height="300" style="border:0" allowfullscreen></iframe>
-		</div>
+<div class="clear"></div>
 
-		<div class="right half">
-			<div class="fb-page" data-href="https://www.facebook.com/barevneuceni/" data-tabs="timeline" data-width="500" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/barevneuceni/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/barevneuceni/">Barevné učení</a></blockquote></div>
-		</div>
-	</div>
+<section id="mapa" class="strip">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.3610577809613!2d14.40295721564065!3d50.098248520560865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9520b6f49757%3A0xdd190d28a9780144!2sPod+ka%C5%A1tany+183%2F3%2C+160+00+Praha+6-Dejvice!5e0!3m2!1scs!2scz!4v1512293439626" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 	<div class="clear"></div>
 </section>

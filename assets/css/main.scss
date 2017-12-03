@@ -25,6 +25,7 @@ body, html {
 	margin: 0;
 	height: 100%;
 	font-weight: 100;
+	background-color: #fdfdfd
 }
 
 body {
@@ -37,7 +38,6 @@ body {
 iframe {
 	border:0;
 	width: 100%;
-	pointer-events: none;
 }
 
 /* CONTAINERS */
@@ -76,6 +76,11 @@ iframe {
 	a {
 		border-bottom: 1px solid white;
 	}
+}
+
+.strip#mapa {
+	margin-top: 40px;
+	padding-bottom: 0;
 }
 
 .half {
@@ -121,10 +126,6 @@ a {
 	color: $front-color;
 	text-decoration: none;
 	border-bottom: 1px solid $gray-color-back;
-}
-
-a > .fa-arrow-right{
-	 color: $green-color-back !important;
 }
 
 p {
@@ -307,14 +308,16 @@ ul {
 		width: 120px;
 		margin-right: 10px;
 	}
+
+	.fa {
+		color: $blue-color-back;
+		width: 30px;
+		text-align: center;
+	}
 }
 
 .profile.large img {
 	width: 140px;
-}
-
-.profile .fa {
-	color: $orange-color-front;
 }
 
 img.large-profile {
