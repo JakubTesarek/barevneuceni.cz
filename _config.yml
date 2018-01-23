@@ -5,10 +5,12 @@ baseurl: ""
 url: "http://www.barevne-uceni.cz"
 
 facebook_username: barevneuceni
+google_api_key: AIzaSyDgzOxHNCWwjK6j0sGPbu5dfrYFWKQwFy8
 
 pages_dir: pages
 posts_dir: _posts
 drafts_dir: _drafts
+
 
 defaults:
   -

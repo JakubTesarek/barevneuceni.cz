@@ -1,10 +1,8 @@
 $(document).ready(function() {
   init_form();
-  init_maps();
   init_external_links();
   init_galery();
 });
-
 
 // GOOGLE TAG MANAGER
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -16,17 +14,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 function init_external_links() {
 	$('a.external' ).attr('target', '_blank');	
 }
-
-function init_maps() {
-  $('#maps').click(function () {
-    $('#maps iframe').css('pointer-events', "auto");
-  });
-
-  $('#maps').mouseleave(function() {
-    $('#maps iframe').css('pointer-events', 'none'); 
-  });
-}
-
 
 function init_form() {
     $('body').on('click', '.flash > button', function(event){
@@ -81,3 +68,37 @@ function init_galery() {
     modal.hide()
   })
 }
+
+function init_map() {
+  var latLon = {lat: 50.098245, lng: 14.405146};
+  var map = new google.maps.Map(document.getElementById('mapa'), {
+    zoom: 17,
+    center: latLon,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DEFAULT
+    }
+  });
+
+  var contentString = '' +
+    '<div id="map-info-window">'+
+      '<h1>Barevné Učení</h1>'+
+      '<div id="content">'+
+        '<p>Pod Kaštany 183/3,<br>Praha 6 - Dejvice, <br>první patro - dveře č. 22</p>'+
+      '</div>'+
+    '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    var marker = new google.maps.Marker({
+      position: latLon,
+      map: map,
+      title: 'Barevné Učení'
+    });
+
+    infowindow.open(map, marker);
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
