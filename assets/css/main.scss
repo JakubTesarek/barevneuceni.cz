@@ -129,6 +129,21 @@ a {
 	border-bottom: 1px solid $gray-color-back;
 }
 
+a.button {
+    display: block;
+    border: 2px solid $orange-color-front;
+	padding: 0.5em;
+	color: white;
+	background-color: $orange-color-front;
+	cursor: pointer;
+    text-align: center;
+}
+
+a.button:hover {
+	background-color: white;
+	color: $orange-color-front;
+}
+
 p {
 	text-align: justify;
 	margin-top: 0;
