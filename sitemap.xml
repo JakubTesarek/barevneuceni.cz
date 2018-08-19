@@ -1,6 +1,6 @@
 ---
 permalink: /sitemap.xml
-layout: 
+layout:
 sitemap_exclude: 1
 ---
 <?xml version="1.0" encoding="UTF-8"?>

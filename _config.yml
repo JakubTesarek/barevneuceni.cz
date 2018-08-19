@@ -17,7 +17,7 @@ defaults:
     scope:
       path: ""
     values:
-      author: "Kateřina Tyšlerová <katka@barevneuceni.cz>"
+      author: "Kateřina Tesárková <katka@barevneuceni.cz>"
       layout: "default"
       excerpt_separator: <!--more-->
       changefreq: weekly
