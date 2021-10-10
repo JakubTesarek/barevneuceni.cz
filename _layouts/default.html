@@ -2,12 +2,13 @@
 <html>
 	{% include head.html %}
 	<body>
-		<div id="modal" class="modal">
-			<span id="modal-close" >&times;</span>
-			<img id="modal-content">
-			<div id="modal-caption"></div>
-		</div>
 		<div id="flashes"></div>
 		{{ content }}
+		<script src="https://feimosi.github.io/baguetteBox.js/js/baguetteBox.js" async></script>
+	    <script>
+	        window.onload = function() {
+	            baguetteBox.run('.galery');
+	        };
+	    </script>
 	</body>
 </html>

@@ -1,7 +1,7 @@
 $(document).ready(function() {
   init_form();
   init_external_links();
-  init_galery();
+  init_order_links()
 });
 
 // GOOGLE TAG MANAGER
@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-56VWP8D');
 
 function init_external_links() {
-	$('a.external' ).attr('target', '_blank');	
+    $('a.external' ).attr('target', '_blank');  
 }
 
 function init_form() {
@@ -54,51 +54,22 @@ function init_form() {
   });
 }
 
+function init_order_links() {
+    $('a.order' ).click(function(event) {
+        event.preventDefault();
+        var link = $(this);
+        link.hide()
 
-function init_galery() {
-  var modal = $('#modal');
-  $('img.open-galery').click(function() {
-    img_url = $(this).data('ref') || $(this).attr('src');
-    modal.find('#modal-content').attr('src', img_url);
-    modal.find('#modal-caption').html($(this).attr('alt'))
-    modal.show()
-  })
+        var product = link.closest('.product');
+        var product_title = product.find('h2').text()
+        product.find('.product_ordered').show();
+        var order_form_input = $('#contact-form textarea');
+        var order_text = order_form_input.val();
 
-  var close = $('#modal-close').click(function(){
-    modal.hide()
-  })
+        if (!order_text) {
+            order_text = 'Dobrý den, mám zájem o tyto pomůcky:';
+        }
+        order_text += '\n- ' + product_title;
+        order_form_input.val(order_text);
+    })
 }
-
-function init_map() {
-  var latLon = {lat: 50.098245, lng: 14.405146};
-  var map = new google.maps.Map(document.getElementById('mapa'), {
-    zoom: 17,
-    center: latLon,
-    mapTypeControlOptions: {
-      style: google.maps.MapTypeControlStyle.DEFAULT
-    }
-  });
-
-  var contentString = '' +
-    '<div id="map-info-window">'+
-      '<h1>Barevné Učení</h1>'+
-      '<div id="content">'+
-        '<p>Pod Kaštany 183/3,<br>Praha 6 - Dejvice, <br>první patro - dveře č. 22</p>'+
-      '</div>'+
-    '</div>';
-
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
-    });
-
-    var marker = new google.maps.Marker({
-      position: latLon,
-      map: map,
-      title: 'Barevné Učení'
-    });
-
-    infowindow.open(map, marker);
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
-  }
